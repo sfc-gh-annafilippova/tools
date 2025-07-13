@@ -136,7 +136,7 @@ func (f *Fetcher) SlurpCodelab(src string, output string) (*codelab, error) {
 	// Only setup oauth if this source is not a local file.
 	if os.IsNotExist(err) {
 		if f.authHelper == nil {
-			f.authHelper, err = auth.NewHelper(f.authToken, auth.ProviderGoogle, f.roundTripper)
+			// if.authHelper, err = auth.NewHelper(f.authToken, auth.ProviderGoogle, f.roundTripper)
 			if err != nil {
 				return nil, err
 			}
